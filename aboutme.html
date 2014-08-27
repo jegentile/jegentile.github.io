@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <title>def jegentile</title>
+
+
+
+    <!-- Bootstrap -->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+<style>
+.btn-skinny {
+	padding: 3px;
+	font-size: 10px;
+	line-height: 1.0;
+	vertical-align:5px;
+}
+
+.description {
+  font-size: 12px;
+  font-weight: normal;
+}
+</style>
+
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">jegentile</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li class="active"><a href="aboutme.html">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron" label="about">
+      <div class="container">
+        <h2>James E. Gentile, Ph.D.</h2>
+        <p>Research, Modeling & Simulation, Data Visualization, Software Development 
+        <!--a class="btn btn-primary btn-lg btn-skinny" href="#aboutme" role="button">PDF &raquo;</a></p-->
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h3>Modeling & Simulation</h3>
+          <p> Agent-based modeling solutions to assist in the understanding of complex systems.</p>
+          <!--p><a class="btn btn-default" href="#" role="button">More &raquo;</a></p-->
+        </div>
+        <div class="col-md-4">
+          <h3>Data Visualization</h3>
+          <p>Data analytics and visualization are crucial to communicate the the behavior of complex systems. </p>
+          <!--p><a class="btn btn-default" href="#" role="button">More &raquo;</a></p-->
+       </div>
+        <div class="col-md-4">
+          <h3>Software Engineering</h3>
+          <p>Proper simulation demands proper model and software design.</p>
+          <!--p><a class="btn btn-default" href="http://www.google.com" role="button">More &raquo;</a></p-->
+        </div>
+       </div>
+      
+      <div class="row">
+      <div class="col-md-4">
+          <h3>Pattern Recognition</h3>
+          <p>Knowledge discovery through machine learning and signal processing.</p>
+          <!--p><a class="btn btn-default" href="http://www.google.com" role="button">More &raquo;</a></p-->
+        </div>
+      
+
+      <div class="col-md-4">
+          <h3>Web Design</h3>
+          <p>Expressive web-based applications.</p>
+          <!--p><a class="btn btn-default" href="http://www.google.com" role="button">More &raquo;</a></p-->
+        </div>
+
+        <div class="col-md-4">
+          <h3>Collaboratory Research</h3>
+          <p>Multi-disciplinary work for novel results.</p>
+          <!--p><a class="btn btn-default" href="http://www.google.com" role="button">More &raquo;</a></p-->
+        </div>
+
+      </div>
+
+           <hr>
+
+    <div ng-app="myApp">
+
+		<div ng-controller="AccordionDemoCtrl">
+
+
+  <accordion close-others="'true'">
+    <accordion-group heading="Professional Experience" is-open="true">
+      
+      <div class="row">
+      <div class="col-md-4">
+         <h5>Lead Computer Scientist, MITRE</h5>
+          <p class="description">Moldeing and Simulation Research Group.</p>
+        </div>
+
+        <div class="col-md-4">
+         <h5>Graduate Co-Op, IBM</h5>
+          <p class="description">Computer Vision Research.</p>
+        </div>
+
+        <div class="col-md-4">
+         <h5>Co-Instructor, University of Notre Dame</h5>
+          <p class="description">Unix for Engineers.</p>
+        </div>
+      </div>
+    </accordion-group>
+    <accordion-group heading="Education" is-open="true">
+     <div class="row">
+      <div class="col-md-4">
+         <h5>Ph.D., Computer Science and Engineering</h5>
+          <p class="description">University of Notre Dame</p>
+        </div>
+
+        <div class="col-md-4">
+         <h5>M.S., Computer Science and Engineering</h5>
+          <p class="description">University of Notre Dame</p>
+        </div>
+
+        <div class="col-md-4">
+         <h5>B.S., Computer Engineering</h5>
+          <p class="description">Trine University</p>
+        </div>
+      </div>
+    </accordion-group>
+    <accordion-group heading="Publications">
+        <div ng-repeat="paper in papers"><p class="description">{{paper}}</p></div>
+    </accordion-group>
+
+    <accordion-group heading="Patents">
+        <div ng-repeat="patent in patents"><p class="description">{{patent}}</p></div>
+    </accordion-group>
+    
+    <!--accordion-group heading="{{group.title}}" ng-repeat="group in groups">
+      {{group.content}}
+    </accordion-group>
+
+    <accordion-group is-open="isopen">
+        <accordion-heading>
+            I can have markup, too! <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': isopen, 'glyphicon-chevron-right': !isopen}"></i>
+        </accordion-heading>
+        This is just some content to illustrate fancy headings.
+    </accordion-group-->
+  </accordion>
+	
+</div>
+</div>
+</div>
+
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script src="js/ui-bootstrap-tpls-0.10.0.min.js"></script>
+
+<script>
+angular.module('myApp',['ui.bootstrap'])
+	.controller('myCtrl',function($scope){
+		$scope.m = 'hello form angular';
+
+	})
+	.controller('AccordionDemoCtrl',function($scope){
+		 
+      $scope.papers = [
+        "Extensive circadian and light regulation of the transcriptome in the malaria mosquito Anopheles gambiae and comparisons to rhythmic expression in Ae. aegypti, Accepted BMC Genomics",
+        "Verifying Agent-Based Models with Steady-State Analysis, CMOT, 2012",
+        "A Framework for Modeling Genetically-Aware Mosquito Vectors for Sterile Insect Technique. IJATS, 2011",
+        "An Agent-Based Genetically-Aware Entomological Model. SCSC, 2011",
+        "Divide and conquer: A four-fold docking experience of agent-based models. SCSC, 2011",
+        "A framework for modeling mosquito vectors. SCSC, 2010",
+        "An efficient, two-stage iris recognition system. IEEE BTAS, 2009",
+        "SLIC: Short-length iris codes. IEEE BTAS, 2009",
+        "Profile Face Detection: A Multi-Biometric Approach. IEEE BTAS, 2008",
+        "Face Detection Algorithm and Feature Performance on FRGC 2.0 Imagery. IEEE BTAS, 2007"];
+        
+        $scope.patents = ["Iris recognition system and method, US Patent No. 8,452,131"]
+
+
+     $scope.oneAtATime = true;
+	});
+
+</script>
+
+  </body>
+</html>
